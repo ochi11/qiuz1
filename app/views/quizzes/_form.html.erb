@@ -1,0 +1,42 @@
+<%= form_with(model: quiz, local: true) do |form| %>
+  <% if quiz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quiz.errors.count, "error") %> prohibited this quiz from being saved:</h2>
+
+      <ul>
+      <% quiz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :question %>
+    <%= form.text_field :question, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correct_answer %>
+    <%= form.text_field :correct_answer, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wrong_answer1 %>
+    <%= form.text_field :wrong_answer1, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wrong_answer2 %>
+    <%= form.text_field :wrong_answer2, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wrong_answer3 %>
+    <%= form.text_field :wrong_answer3, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

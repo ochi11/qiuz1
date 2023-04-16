@@ -1,0 +1,24 @@
+<div class="quiz">
+  <% @quizzes.each do |quiz| %>
+    <h2><%= quiz[:question] %></h2>
+    <ul>
+      <% quiz[:choices].each do |choice| %>
+        <li><%= choice %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+
+<% @quizzes.each do |quiz| %>
+  <div class="quiz">
+    <h2><%= quiz.question %></h2>
+    <ul>
+      <% quiz.answers.each do |answer| %>
+        <li><%= answer %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<h1>answer</h1>

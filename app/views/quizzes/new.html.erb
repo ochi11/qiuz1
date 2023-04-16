@@ -1,0 +1,31 @@
+<!-- クイズアプリ作成部分 -->
+<%= form_with model: @quiz do |f| %>
+  <div class="field">
+    <%= f.label :question %>
+    <%= f.text_field :question %>
+  </div>
+
+  <div class="field">
+    <%= f.label :correct_answer %>
+    <%= f.text_field :correct_answer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wrong_answer1 %>
+    <%= f.text_field :wrong_answer1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wrong_answer2 %>
+    <%= f.text_field :wrong_answer2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wrong_answer3 %>
+    <%= f.text_field :wrong_answer3 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
